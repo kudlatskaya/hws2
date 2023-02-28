@@ -13,8 +13,9 @@ export const pureAddUser = (
     setName: (name: string) => void,
     addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-   if (name === '') {
-       setError('Name is empty')
+
+   if (name.trim() === '') {
+       setError('Ошибка! Введите имя!')
 
    } else {
        addUserCallback(name)
@@ -23,7 +24,7 @@ export const pureAddUser = (
 }
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
-    name === '' && setError('Name is empty')
+    name.trim() === '' && setError('Ошибка! Введите имя!')
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
@@ -43,10 +44,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(name) // need to fix
-
+        setName(e.currentTarget.value) // need to fix
         error && setError('')
     }
+
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
     }
@@ -60,7 +61,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = users[totalUsers - 1].name; // need to fix
+
+    const lastUserName = totalUsers && users[totalUsers - 1].name; // need to fix
 
     return (
         <Greeting
