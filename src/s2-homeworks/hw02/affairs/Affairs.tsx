@@ -10,6 +10,7 @@ type AffairsPropsType = {
     filter: FilterType
 }
 
+
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
         // need to fix
