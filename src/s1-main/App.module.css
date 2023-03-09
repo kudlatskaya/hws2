@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet');
+
 .App {
     --header_height: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    border-bottom: 0.1rem solid  #D9D9D9;
 }
 
 .hw {
-
+    margin: 2.4rem 7rem 3.2rem 7rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .hwTitle {
-
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: #000000;
+    margin: 13.1rem 7rem 1rem 7rem;
 }
