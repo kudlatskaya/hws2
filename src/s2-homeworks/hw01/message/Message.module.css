@@ -1,15 +1,17 @@
 .message {
     /*text-align: right;*/
-    /*display: flex;*/
-    /*!* flex-direction: row; *!*/
+    display: flex;
+     flex-direction: column;
     /*justify-content: flex-end;*/
-    direction: rtl;
+    /*direction: rtl;*/
+    align-items: flex-end;
 }
 
 .imageAndText {
     /*position: relative;*/
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .imageAndText img {
@@ -17,35 +19,64 @@
     height: 4.8rem;
     border: 2.4rem;
     right: 0;
+    order: 1;
 }
 
 .text {
-    /*display: inline-block;*/
-    /*width: 52.7rem;*/
+    color: #FFFFFF;
     min-height: 6rem;
+    width: 50%;
     background: #0066CC;
     border-radius: 0.7rem;
     margin-right: 1rem;
-    padding: 0.7rem 1.3rem 0.8rem 1.3rem;
+    padding: 0.7rem 1.3rem 0.9rem 1.3rem;
     /*box-shadow: 0rem 0.5rem 2rem rgba(29, 33, 38, 0.03), 0rem 0.1rem 0.2rem rgba(29, 33, 38, 0.1);*/
+    display: flex;
+    /*justify-content: flex-end;*/
+    align-items: flex-end;
+    flex-direction: column;
+    order: -1;
 }
+/*.triangle-bottom-left {*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-bottom: 200px solid green;*/
+/*    border-right: 200px solid transparent;*/
+/*}*/
 
-.text::after {
+.messageText::after {
     content: '';
     position: relative;
-    right: -2.3rem;
-    bottom: -0.9rem;
+    right: -21.8rem;
+    bottom: 0.1rem;
     border: 1.1rem solid transparent;
     border-bottom: 1.1rem solid #0066CC;
     z-index: -1;
+
+    /*align-self: flex-end;*/
+    /*justify-content: flex-end;*/
+    /*text-align: right;*/
+    /*flex-direction: row-reverse;*/
+    /*align-content: flex-end;*/
 }
 
 .name {
-
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    /*align-self: flex-start;*/
 }
 
 .messageText {
-
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    /*direction: ltr;*/
+    width: 100%;
+    white-space: pre-wrap;
+    margin-top: 0.3rem;
 }
 
 .time {

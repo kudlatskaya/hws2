@@ -2,17 +2,25 @@
 
 .App {
     --header_height: 60px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 hr {
     border-bottom: 0.1rem solid  #D9D9D9;
 }
 
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
 .hw {
     margin: 2.4rem 7rem 3.2rem 7rem;
     display: flex;
     flex-direction: column;
+}
+
+#hw1 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hwTitle {
