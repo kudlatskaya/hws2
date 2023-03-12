@@ -17,6 +17,7 @@ hr {
     margin: 3.3rem 7rem;
     display: flex;
     flex-direction: column;
+    min-height: 33.6rem;
 }
 
 .hw1 {
