@@ -3,8 +3,10 @@
     align-items: center;
     width: 185px;
 
-    border: 1.5px solid var(--color);
+    border: 2px solid var(--color);
     border-radius: 5px;
+
+    margin-bottom: 0.8rem;
 }
 
 .name {
@@ -13,6 +15,10 @@
     justify-content: center;
     width: 145px;
     height: 37px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .closeButton {
@@ -24,8 +30,9 @@
 
     background-color: transparent;
     border: none;
-    border-left: 1.5px solid var(--color);
+    border-left: 2px solid var(--color);
 
-    font-weight: 900;
+    font-weight: 400;
+    font-size: 20px;
     cursor: pointer;
 }

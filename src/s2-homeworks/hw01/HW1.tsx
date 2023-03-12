@@ -34,7 +34,7 @@ export const message0: MessageType = {
         name: 'Ivan',  // можно менять
     },
     message: {
-        text: 'Hello, she didn’t do anything and rested all day, how are you? Hello, she didn’t do anything and rested all day, how are you?', // можно менять
+        text: 'Hello, she didn’t do anything and rested all day, how are you? ', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -42,17 +42,17 @@ export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        name: 'Nik', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css  зеркальное сообщение для тренировки css word-wrap: break-word; word-wrap: break-word; ', // можно менять
-        time: '22:00', // можно менять
+        text: 'Hello, how are you, what did you do yesterday?', // можно менять
+        time: '22:01', // можно менять
     },
 }
 
 const HW1 = () => {
     return (
-        <div id={'hw1'}>
+        <div id={'hw1'} className={s2.hw1}>
             <div className={s2.hwTitle}>Hometask #1</div>
             <hr />
             <div className={s2.hw}>
