@@ -19,7 +19,7 @@
 .text {
     color: #FFFFFF;
     min-height: 6rem;
-    max-width: 60%;
+    max-width: 45%;
     background: #0066CC;
     border-radius: 0.7rem;
     margin-right: 1rem;
@@ -60,6 +60,7 @@
     line-height: 2rem;
     max-width: 100%;
     white-space: pre-wrap;
+    word-wrap: break-word;
     margin-top: 0.3rem;
 }
 
