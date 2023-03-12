@@ -2,35 +2,98 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    gap: 1.2rem;
 }
 
 .error {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+margin-top: 1rem;
+
+    color: #CC0000;
 }
 
 .input {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    height:3.6rem;
+    width: 32.7rem;
+    padding: 0.8rem 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #000000;
 }
 
 .input:focus {
+    outline: none;
+    border-color: #D1D1D1;
 }
 
 .errorInput {
+    border: 1px solid #CC0000;
+    border-radius: 5px;
+    height:3.6rem;
+    width: 32.7rem;
+    padding: 0.8rem 1.2rem;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #000000;
 }
 
 .button {
-
+    background: #0066CC;
+    border: none;
+    border-radius: 0.3rem;
+    width: 7.8rem;
+    height: 3.6rem;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 .button:focus {
 }
 
 .button:active {
+
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.9rem;
 }
 
 .greeting {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    /*margin-top: 1rem;*/
+
+    color: #000000;
 }

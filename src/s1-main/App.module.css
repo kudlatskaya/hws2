@@ -2,6 +2,7 @@
 
 .App {
     --header_height: 60px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 hr {
@@ -22,7 +23,7 @@ hr {
 
 .hw1 {
     margin-top: 10.7rem;
-    font-family: 'Montserrat', sans-serif;
+
 }
 
 .hwTitle {

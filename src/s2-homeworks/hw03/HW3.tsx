@@ -41,6 +41,7 @@ const HW3 = () => {
     return (
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #3</div>
+            <hr />
             {/*для автоматической проверки дз (не менять)*/}
 
             <div className={s2.hw}>
@@ -49,6 +50,7 @@ const HW3 = () => {
                     addUserCallback={addUserCallback}
                 />
             </div>
+            <hr />
         </div>
     )
 }

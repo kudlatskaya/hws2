@@ -10,7 +10,7 @@ type GreetingPropsType = {
     onEnter: (e: KeyboardEvent<HTMLInputElement>) => void // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
-    lastUserName?: string | 0// need to fix any
+    lastUserName?: string | 0 // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -58,7 +58,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     className={s.button}
                     disabled={!name.trim()}
                 >
-                    add
+                    Add
                 </button>
             </div>
 
