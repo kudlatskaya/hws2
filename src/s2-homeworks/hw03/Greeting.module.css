@@ -11,25 +11,20 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
-margin-top: 1rem;
-
+    margin-top: 1rem;
     color: #CC0000;
 }
 
 .input {
     border: 1px solid #D1D1D1;
     border-radius: 5px;
-    height:3.6rem;
+    height: 3.6rem;
     width: 32.7rem;
     padding: 0.8rem 1.2rem;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height */
-
-
     color: #000000;
 }
 
@@ -41,7 +36,7 @@ margin-top: 1rem;
 .errorInput {
     border: 1px solid #CC0000;
     border-radius: 5px;
-    height:3.6rem;
+    height: 3.6rem;
     width: 32.7rem;
     padding: 0.8rem 1.2rem;
     outline: none;
@@ -49,9 +44,6 @@ margin-top: 1rem;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height */
-
-
     color: #000000;
 }
 
@@ -92,8 +84,5 @@ margin-top: 1rem;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
-    /*margin-top: 1rem;*/
-
     color: #000000;
 }
