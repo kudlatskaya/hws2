@@ -16,10 +16,16 @@
 .nav a:hover {
 }
 
+
 .nav a.active {
+    color: yellow;
 }
 .close {
 }
 
 .close img {
 }
+
+/*.active {*/
+/*    color: yellow;*/
+/*}*/
