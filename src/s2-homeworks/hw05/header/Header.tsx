@@ -33,6 +33,7 @@ export const Header: FC<PropsType> = ({handleOpen}) => {
                 />
                 <h1>{pageName}</h1>
             </div>
+            <hr />
         </>
     )
 }

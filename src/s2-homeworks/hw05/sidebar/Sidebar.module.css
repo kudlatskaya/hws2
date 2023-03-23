@@ -1,12 +1,16 @@
 .sidebar {
+    margin: 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
 }
-
+/*сайдбар открыт*/
 .sidebar.open {
 }
-
+/*затемнение справа от открытого меню*/
 .background {
 }
 
+/**меню*/
 .nav {
 }
 
@@ -16,10 +20,11 @@
 .nav a:hover {
 }
 
-
+/*посещенная ссылка*/
 .nav a.active {
     color: yellow;
 }
+/**кнопка закрыть*/
 .close {
 }
 
