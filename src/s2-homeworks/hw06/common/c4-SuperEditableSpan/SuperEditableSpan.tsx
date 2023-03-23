@@ -2,7 +2,6 @@ import React, {
     DetailedHTMLProps,
     InputHTMLAttributes,
     HTMLAttributes,
-    KeyboardEvent,
     useState,
 } from 'react'
 import s from './SuperEditableSpan.module.css'
@@ -43,20 +42,20 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
     const onEnterCallback = () => {
         // выключить editMode при нажатии Enter // делают студенты
-        // event.key  === 'Enter' && setEditMode(false)
-        onEnter?.() && setEditMode(false)
+        setEditMode(false)
+        onEnter?.()
     }
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
         // выключить editMode при нажатии за пределами инпута // делают студенты
-
-        onBlur?.(e) && setEditMode(false)
+        setEditMode(false)
+        onBlur?.(e)
     }
     const onDoubleClickCallBack = (
         e: React.MouseEvent<HTMLSpanElement, MouseEvent>
     ) => {
         // включить editMode при двойном клике // делают студенты
-
-        onDoubleClick?.(e) && setEditMode(true)
+        setEditMode(true)
+        onDoubleClick?.(e)
     }
 
     const spanClassName = s.span
