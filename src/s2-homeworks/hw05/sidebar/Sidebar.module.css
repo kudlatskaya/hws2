@@ -42,12 +42,14 @@
 
 
 .nav a:hover {
+    color: #58ACFF;
 }
 
 /*посещенная ссылка*/
 .nav a.active {
     text-decoration-line: underline;
     color: #0059B2;
+    /*color: #3D6B99;*/
 }
 /**кнопка закрыть*/
 .close {
