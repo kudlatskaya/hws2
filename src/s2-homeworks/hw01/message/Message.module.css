@@ -44,6 +44,7 @@
     bottom: -0.9rem;
     border: 1.1rem solid transparent;
     border-bottom-color: #0066CC;
+    z-index: -10;
 }
 
 .name {
