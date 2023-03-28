@@ -10,6 +10,8 @@
     width: 30%;
     height: 100%;
     background-color: #ffffff;
+    padding: 2.2rem 2.2rem 6rem 7rem;
+    flex-direction: row-reverse;
 }
 /*затемнение справа от открытого меню*/
 .background {
@@ -24,22 +26,35 @@
 
 /**меню*/
 .nav {
+    margin-top: 6.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
 }
 
 .nav a {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: #000000;
+    text-decoration: none;
 }
+
 
 .nav a:hover {
 }
 
 /*посещенная ссылка*/
 .nav a.active {
-    color: yellow;
+    text-decoration-line: underline;
+    color: #0059B2;
 }
 /**кнопка закрыть*/
 .close {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
 }
 
 .close img {
