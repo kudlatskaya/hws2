@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
@@ -31,7 +31,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-pre-junior-link'}
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
-                        className={({isActive}) => (isActive ? s.active : '')} // делает студент
+                        className={({isActive}) => (isActive ? s.visited : '')} // делает студент
                     >
                         Pre-junior
                     </NavLink>
@@ -39,7 +39,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-link'}
                         to={PATH.JUNIOR}
                         onClick={handleClose}
-                        className={({isActive}) => (isActive ? s.active : '')} // делает студент
+                        className={({isActive}) => (isActive ? s.visited : '')} // делает студент
                     >
                         Junior
                     </NavLink>
@@ -47,9 +47,9 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-plus-link'}
                         to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
-                        className={(state) => (state.isActive ? s.active : '')} // делает студент
+                        className={({isActive}) => (isActive ? s.visited : '')} // делает студент
                     >
-                        Junior Plus
+                        Junior PlUS
                     </NavLink>
                 </nav>
             </aside>

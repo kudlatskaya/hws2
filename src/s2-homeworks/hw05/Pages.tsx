@@ -7,6 +7,7 @@ import JuniorPlus from './pages/JuniorPlus'
 import HW5 from "./HW5";
 
 export const PATH = {
+    ROOT: '/',
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
@@ -19,7 +20,7 @@ function Pages() {
             <Routes>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                <Route path={'/'} />
+                <Route path={PATH.ROOT} element={<PreJunior/>}/>
 
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
