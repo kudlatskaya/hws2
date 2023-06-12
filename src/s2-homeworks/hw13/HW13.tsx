@@ -19,6 +19,7 @@ const HW13 = () => {
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
+    const [disabled, setDisabled] = useState(false)
 
     const send = (x?: boolean | null) => () => {
         const url =
@@ -30,6 +31,7 @@ const HW13 = () => {
         setImage('')
         setText('')
         setInfo('...loading')
+        setDisabled(true)
 
         axios
             .post(url, {success: x})
@@ -37,78 +39,95 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
-
+                setInfo('')
+                setDisabled(false)
             })
             .catch((e) => {
                 // дописать
+                setDisabled(false)
+                setInfo('')
 
+                if (e.response.status === 500) {
+
+                    setImage(error500)
+                    setCode('Код 500!')
+
+                } else if (e.response.status === 400) {
+
+                    setImage(error400)
+                    setCode('Код 400!')
+
+                } else {
+                    setImage(errorUnknown)
+                    setCode('Код unknown!')
+                }
             })
     }
 
-    return (
-        <div id={'hw13'}>
-            <div className={s2.hwTitle}>Homework #13</div>
+        return (
+            <div id={'hw13'}>
+                <div className={s2.hwTitle}>Homework #13</div>
 
-            <div className={s2.hw}>
-                <div className={s.buttonsContainer}>
-                    <SuperButton
-                        id={'hw13-send-true'}
-                        onClick={send(true)}
-                        xType={'secondary'}
-                        // дописать
-
-                    >
-                        Send true
-                    </SuperButton>
-                    <SuperButton
-                        id={'hw13-send-false'}
-                        onClick={send(false)}
-                        xType={'secondary'}
-                        // дописать
-
-                    >
-                        Send false
-                    </SuperButton>
-                    <SuperButton
-                        id={'hw13-send-undefined'}
-                        onClick={send(undefined)}
-                        xType={'secondary'}
-                        // дописать
-
-                    >
-                        Send undefined
-                    </SuperButton>
-                    <SuperButton
-                        id={'hw13-send-null'}
-                        onClick={send(null)} // имитация запроса на не корректный адрес
-                        xType={'secondary'}
-                        // дописать
-
-                    >
-                        Send null
-                    </SuperButton>
-                </div>
-
-                <div className={s.responseContainer}>
-                    <div className={s.imageContainer}>
-                        {image && <img src={image} className={s.image} alt="status"/>}
+                <div className={s2.hw}>
+                    <div className={s.buttonsContainer}>
+                        <SuperButton
+                            id={'hw13-send-true'}
+                            onClick={send(true)}
+                            xType={'secondary'}
+                            // дописать
+                            disabled={disabled}
+                        >
+                            Send true
+                        </SuperButton>
+                        <SuperButton
+                            id={'hw13-send-false'}
+                            onClick={send(false)}
+                            xType={'secondary'}
+                            // дописать
+                            disabled={disabled}
+                        >
+                            Send false
+                        </SuperButton>
+                        <SuperButton
+                            id={'hw13-send-undefined'}
+                            onClick={send(undefined)}
+                            xType={'secondary'}
+                            // дописать
+                            disabled={disabled}
+                        >
+                            Send undefined
+                        </SuperButton>
+                        <SuperButton
+                            id={'hw13-send-null'}
+                            onClick={send(null)} // имитация запроса на не корректный адрес
+                            xType={'secondary'}
+                            // дописать
+                            disabled={disabled}
+                        >
+                            Send null
+                        </SuperButton>
                     </div>
 
-                    <div className={s.textContainer}>
-                        <div id={'hw13-code'} className={s.code}>
-                            {code}
+                    <div className={s.responseContainer}>
+                        <div className={s.imageContainer}>
+                            {image && <img src={image} className={s.image} alt="status"/>}
                         </div>
-                        <div id={'hw13-text'} className={s.text}>
-                            {text}
-                        </div>
-                        <div id={'hw13-info'} className={s.info}>
-                            {info}
+
+                        <div className={s.textContainer}>
+                            <div id={'hw13-code'} className={s.code}>
+                                {code}
+                            </div>
+                            <div id={'hw13-text'} className={s.text}>
+                                {text}
+                            </div>
+                            <div id={'hw13-info'} className={s.info}>
+                                {info}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
-export default HW13
+    export default HW13
