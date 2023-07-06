@@ -80,7 +80,7 @@ const HW14 = () => {
                     {isLoading ? '...ищем' : <br/>}
                 </div>
 
-                {mappedTechs}
+                {isLoading ? '' : mappedTechs}
             </div>
         </div>
     )
