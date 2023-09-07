@@ -37,8 +37,9 @@ const HW14 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
-                res && setTechs(res.data.techs)
                 setLoading(false)
+                res && setTechs(res.data.techs)
+
                 //
             })
     }
