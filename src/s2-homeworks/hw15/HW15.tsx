@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {logDOM} from "@testing-library/react";
 
 /*
 * 1 - дописать SuperPagination
@@ -27,6 +28,8 @@ type ParamsType = {
     count: number
 }
 
+// type ResponseTechsType = { techs: TechType[], totalCount: number }
+
 const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
@@ -47,35 +50,39 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
+
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
+                res && setTechs(res.data.techs)
+                res && setTotalCount(res.data.totalCount)
+                setLoading(false)
             })
     }
+
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
         // setPage(
+         setPage(newPage)
         // setCount(
-
+         setCount(newCount)
         // sendQuery(
+        const params = new URLSearchParams({page: newPage.toString(), count: newCount.toString()});
+        sendQuery(params)
         // setSearchParams(
-
-        //
+        setSearchParams(params)
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
 
         // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+          setPage(1) // при сортировке сбрасывать на 1 страницу
 
         // sendQuery(
         // setSearchParams(
