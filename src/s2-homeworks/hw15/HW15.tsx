@@ -5,7 +5,6 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
-import {logDOM} from "@testing-library/react";
 
 /*
 * 1 - дописать SuperPagination
@@ -68,11 +67,11 @@ const HW15 = () => {
         // делает студент
 
         // setPage(
-         setPage(newPage)
+        setPage(newPage)
         // setCount(
-         setCount(newCount)
+        setCount(newCount)
         // sendQuery(
-        const params = new URLSearchParams({page: newPage.toString(), count: newCount.toString()});
+        const params = new URLSearchParams({page: newPage.toString(), count: newCount.toString(), sort: sort});
         sendQuery(params)
         // setSearchParams(
         setSearchParams(params)
@@ -82,17 +81,20 @@ const HW15 = () => {
         // делает студент
 
         // setSort(
-          setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
         // sendQuery(
+        const params = new URLSearchParams({page: page.toString(), count: count.toString(), sort: newSort});
+        sendQuery(params)
         // setSearchParams(
-
+        setSearchParams(params)
         //
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count, sort: params.sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
