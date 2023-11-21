@@ -19,5 +19,15 @@ html {
 }
 
 .select {
+    width: 17.1rem;
+    height: 3.6rem;border-radius: 2px;
+    border: 1px solid #323232;
+}
 
+.label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0.6rem;
 }
