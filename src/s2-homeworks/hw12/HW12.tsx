@@ -20,6 +20,11 @@ const themes = [
 
 ]
 
+const bg = [
+    { color: '#000000', background: '#FFFFFF'},
+    { color: '#000000', background: '#DDEEFF'},
+    { color: '#FFFFFF', background: '#212A34'},
+]
 
 const HW12 = () => {
     // взять ид темы из редакса
@@ -31,7 +36,12 @@ const HW12 = () => {
     }
 
     useEffect(() => {
-        document.documentElement.dataset.theme = themeId + ''
+        document.documentElement.dataset.theme = themeId + '';
+        let select = document.getElementById('hw12-select-theme');
+        if (select) {
+            select.style.background = bg[themeId-1].background
+            select.style.color = bg[themeId-1].color
+        }
     }, [themeId])
 
     return (
