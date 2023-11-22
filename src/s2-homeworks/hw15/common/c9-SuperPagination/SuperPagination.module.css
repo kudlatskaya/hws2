@@ -1,11 +1,21 @@
 .pagination {
     display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
 }
 
-.text1 {
+/*.pag .select {*/
+/*    width: 40px;*/
+/*}*/
 
+.text1 {
+   margin: 0 1rem;
 }
 
 .text2 {
-
+    margin: 0 1rem;
 }
+

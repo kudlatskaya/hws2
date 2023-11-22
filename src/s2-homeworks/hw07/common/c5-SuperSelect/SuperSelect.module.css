@@ -12,3 +12,7 @@
 
 .option:hover {
 }
+
+select[id='hw15-pagination-select'] {
+    width: 60px;
+}

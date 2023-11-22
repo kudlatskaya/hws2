@@ -1,25 +1,48 @@
+.table {
+    width: 606px;
+    margin-top: 4rem;
+}
+
 .tech {
-    width: 50vw;
+    width: 50%;
 }
 
 .developer {
-
+    width: 50%;
 }
 
 .techHeader {
-    width: 50vw;
+    width: 50%;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .developerHeader {
-
+    width: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .row {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 36px;
+    border-bottom: 1px solid #E5E5E5;
     display: flex;
 }
 
 .rowHeader {
     display: flex;
+    height: 36px;
+    font-family: Roboto;
+    font-style: normal;
+    background-color: #E5E5E5;
 }
 
 .loading {
