@@ -1,7 +1,22 @@
 .tech {
-
+    color: #000;
+    font-family: Roboto;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    width: 40%;
 }
 
 .loading {
-
+    color: #4D4D4D;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    margin:  1.1rem 0;
 }
