@@ -5,7 +5,7 @@
 
 .responseContainer {
     display: flex;
-    justify-content: space-between;
+    gap: 10rem;
     align-items: center;
     padding: 5rem;
 
