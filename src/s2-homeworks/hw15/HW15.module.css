@@ -13,11 +13,13 @@
 
 .techHeader {
     width: 50%;
-    font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .developerHeader {
@@ -25,6 +27,14 @@
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.developerHeader span,
+.techHeader span {
+    color: #ADABAC;
 }
 
 .row {
@@ -34,7 +44,8 @@
     line-height: 24px;
     height: 36px;
     border-bottom: 1px solid #E5E5E5;
-    display: flex;
+    align-items: center;
+    padding-left: 2rem;
 }
 
 .rowHeader {
@@ -43,6 +54,8 @@
     font-family: Roboto;
     font-style: normal;
     background-color: #E5E5E5;
+    align-items: center;
+    padding-left: 2rem;
 }
 
 .loading {
