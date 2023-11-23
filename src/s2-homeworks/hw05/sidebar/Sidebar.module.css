@@ -7,11 +7,12 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    min-width: 20%;
     height: 100%;
     background-color: #ffffff;
     padding: 2.2rem 2.2rem 6rem 7rem;
     flex-direction: row-reverse;
+    z-index: 10;
 }
 
 .background {
